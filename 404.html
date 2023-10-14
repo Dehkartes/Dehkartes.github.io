@@ -1,12 +1,10 @@
 ---
-layout: index-material-sidebar-left
-title: Ooops!
+title: 404 Error
+layout: page
+icon: fa-unlink
+permalink: /404
+hide: true
+robots: noindex, nofollow
+canonical: false
 ---
-<div class="error">
-    <p>Something seems to have gone wrong here. Sorry 'bout that</p>
-    <p>Maybe we can make up for it with some posts and then be friends again?</p>
-</div>
-
-{% for post in site.posts limit:4 %}
-    {% include article_index.html %}
-{% endfor %}
+<p>The requested page could not be found.</p>

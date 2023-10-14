@@ -1,102 +1,55 @@
-<!-- menu, we did go with a static one, you can build a dynamic one, just google a little around -->
-<div class="main-menu">
-    <div class="content">
-        <nav id="menu">
-            <a class="toggle-link noline"><i class="fa fa-close fa-lg"></i></a>
-            <ul>
-                <li>
-                    <a class="homelink" href="{{ site.baseurl | replace: '//', '/' }}/">Home</a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl | replace: '//', '/' }}/archive">Archive</a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl | replace: '//', '/' }}/typography">Typography</a>
-                </li>
-                <li><a class="dropdown-button" href="#" data-activates='drop-example'>Page Layouts&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
-                </li>
-                <div id="drop-example" class="dropdown-content">
-                    <li>
-                        <a href="/page-full">page-full</a>
-                    </li>
-                    <li>
-                        <a href="/page-classic-sidebar-right">page classic sidebar right</a>
-                    </li>
-                    <li>
-                        <a href="/page-classic-sidebar-left">page classic sidebar left</a>
-                    </li>
-                    <li>
-                        <a href="/page-material-sidebar-right">page material sidebar right</a>
-                    </li>
-                    <li>
-                        <a href="/page-material-sidebar-left">page material sidebar left</a>
-                    </li>
-                </div>
-                <li>
-                    <a href="#colorswitch" class="modal-trigger">Change Colors <i class="fa fa-cog"></i></a>
-                </li>
-            </ul>
-        </nav>
-        <nav class="iconnav">
-            <ul>
-                <li class="sicon">
-                    <a href='#search'><i class='fa fa-search'></i></a>
-                </li>
-                {% if site.tumblr %}
-                <li class="social">
-                    <a href="{{ site.tumblr }}" class="tumblr"><i class="fa fa-tumblr"></i></a>
-                </li>
-                {% endif %} {% if site.pinterest %}
-                <li class="social">
-                    <a href="{{ site.pinterest }}" class="pinterest"><i class="fa fa-pinterest"></i></a>
-                </li>
-                {% endif %} {% if site.instagram %}
-                <li class="social">
-                    <a href="{{ site.instagram }}" class="instagram"><i class="fa fa-instagram"></i></a>
-                </li>
-                {% endif %} {% if site.twitter %}
-                <li class="social">
-                    <a href="{{ site.twitter }}" class="twitter"><i class="fa fa-twitter"></i></a>
-                </li>
-                {% endif %} {% if site.facebook %}
-                <li class="social">
-                    <a href="{{ site.facebook }}" class="facebook"><i class="fa fa-facebook"></i></a>
-                </li>
-                {% endif %} {% if site.youtube %}
-                <li class="social">
-                    <a href="{{ site.youtube }}" class="youtube"><i class="fa fa-youtube"></i></a>
-                </li>
-                {% endif %} {% if site.vimeo %}
-                <li class="social">
-                    <a href="{{ site.vimeo }}" class="vimeo"><i class="fa fa-vimeo-square"></i></a>
-                </li>
-                {% endif %} {% if site.soundcloud %}
-                <li class="social">
-                    <a href="{{ site.soundcloud }}" class="soundcloud"><i class="fa fa-soundcloud"></i></a>
-                </li>
-                {% endif %}
-            </ul>
-        </nav>
-        <a href='#menu' class="toggle-link noline">
-            <i class="fa fa-navicon"></i>
-        </a>
-    </div>
-</div>
+{%- comment -%}
+  Include vars:
+  section_items
+{%- endcomment -%}
 
-
-
-
-<div id="colorswitch" class="modal color-change">
-    <div class="modal-content">
-      <h4>Change Color Palette</h4>
-      <p>
-      <img id="indigo" alt="color palette preview indigo" src="{{ site.media_folder }}/indigo.jpg">
-      <img id="brown" alt="color palette preview brown" src="{{ site.media_folder }}/brown.jpg">
-      <img id="green" alt="color palette preview green" src="{{ site.media_folder }}/green.jpg">
-      <img id="teal" alt="color palette preview teal" src="{{ site.media_folder }}/teal.jpg">
-      </p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
-    </div>
-  </div>
+<!-- Nav -->
+<nav id="nav">
+  <ul>
+    {%- assign _pages = site.html_pages | where_exp: "page", "page.hide != true" -%}
+    {%- unless _pages == null -%}
+      {%- assign _pages = _pages | sort: 'order' -%}
+      {%- for _page in _pages -%}
+        {%- assign _title = _page.title | default: _page.layout -%}
+        {%- assign _slug = _title | slugify -%}
+        {%- assign _icon = _page.icon | default: 'fa-link' -%}
+        {%- if _page.icon-style == 'regular' -%}
+          {%- assign _class = 'icon-r' -%}
+        {%- elsif _page.icon-style == 'brands' -%}
+          {%- assign _class = 'icon-b' -%}
+        {%- else -%}
+          {%- assign _class = 'icon' -%}
+        {%- endif -%}
+        {%- comment -%}<!-- page.url (no underscore) is the url of the current page-->{%- endcomment -%}
+        {%- if _page.url == page.url -%}
+          <li><a href="#" id="{{- _slug -}}" class="active">
+            <span class="{{ _class }} {{ _icon }}">{{- _title -}}</span>
+          </a></li>
+        {%- elsif _page.url -%}
+          <li><a href="{{- _page.url | absolute_url -}}" id="{{- _slug -}}-link">
+            <span class="{{ _class }} {{ _icon }}">{{- _title -}}</span>
+          </a></li>
+        {%- else -%}
+          <li><a href="{{- '/' | absolute_url -}}" id="broken-link"><span class="icon fa-unlink">[broken link]</span></a></li>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endunless -%}
+    {%- assign _sections = include.section_items | where_exp: "section", "section.hide != true" -%}
+    {%- if _pages[0] and _sections[0] -%}<hr>{%- endif -%}
+    {%- unless _sections == null -%}
+      {%- for _sect in _sections -%}
+        {%- assign _title = _sect.title | default: _sect.layout | default: 'Untitled' -%}
+        {%- assign _slug = _title | slugify -%}
+        {%- assign _icon = _sect.icon | default: 'fa-file' -%}
+        {%- if _sect.icon-style == 'regular' -%}
+          {%- assign _class = 'icon-r' -%}
+        {%- elsif _sect.icon-style == 'brands' -%}
+          {%- assign _class = 'icon-b' -%}
+        {%- else -%}
+          {%- assign _class = 'icon' -%}
+        {%- endif -%}
+        <li><a href="#{{- _slug -}}" id="{{- _slug -}}-link" class="scrolly"><span class="{{ _class }} {{ _icon }}">{{- _title -}}</span></a></li>
+      {%- endfor -%}
+    {%- endunless -%}
+  </ul>
+</nav>
