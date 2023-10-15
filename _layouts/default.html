@@ -1,14 +1,16 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
-Prologue by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-Jekyll integration by Chris Bobbe | chrisbobbe.github.io
+    Type on Strap jekyll theme v2.4.6
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
 -->
-<html>
-	{%- include head.html -%}
-	<body>
-		{{- content -}}
-		{%- include footer.html -%}
-	</body>
+<html lang="en">
+  {% include default/head.liquid %}
+  <body>
+    {% include default/navbar.liquid %}
+    <div class="content">
+      {{ content }}
+    </div>
+    {% include default/footer.liquid %}
+  </body>
 </html>
