@@ -102,7 +102,7 @@ analytics:
 # Site Author
 author:
   name             : "Hash Fractal"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/Fractarium.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Welcome"
   location         : "Somewhere"
   email            : "hashfractal@gmail.com"
