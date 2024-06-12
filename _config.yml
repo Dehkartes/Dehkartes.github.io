@@ -22,7 +22,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "Dehkartes"
 description              : "Edge of the world"
 url                      : "https://Dehkartes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Dehkartes/dehkarets.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/Fractarium.png"
@@ -112,11 +112,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  name             : "Dehkartes"
+  avatar           : "/assets/images/Rubin's vase.jpg"
+  bio              : "Zenith"
   location         : "Somewhere"
-  email            :
+  email            : "Dehkartes@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -312,6 +312,15 @@ compress_html:
 # Defaults
 defaults:
   # _posts
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
   - scope:
       path: ""
       type: posts
