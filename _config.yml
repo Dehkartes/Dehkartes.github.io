@@ -114,7 +114,7 @@ analytics:
 author:
   name             : "Dehkartes" # "Your Name"
   avatar           : "/assets/images/Rubin's vase.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Zenith" # "I am an **amazing** person."
+  bio              : "Next Generation Software Engineer" # "I am an **amazing** person."
   location         : "Somewhere"
   email            : "Dehkartes@gmail.com"
   links:
