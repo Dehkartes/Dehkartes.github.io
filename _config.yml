@@ -115,7 +115,7 @@ author:
   name             : "Dehkartes" # "Your Name"
   avatar           : "/assets/images/Rubin's vase.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Next Generation Software Engineer" # "I am an **amazing** person."
-  location         : "Somewhere"
+  location         : "It's everywhere, it's nowhere"
   email            : "Dehkartes@gmail.com"
   links:
     - label: "Email"
