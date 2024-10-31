@@ -1,0 +1,211 @@
+---
+title: "Resume" 
+toc: true
+toc_sticky: true
+date: 2024-01-01 00:00:00 +0900
+last_modified_at: 2024-01-01 00:00:00 +0900
+---
+
+# 허세진 이력서
+
+- Email: **hsj3925@naver.com**
+- GitHub: [**https://github.com/Dehkartes**](https://github.com/Dehkartes)
+- Portfolio: [**https://dehkartes.notion.site**](https://www.notion.so/e19317e9161c4924a43afd2f4892349a?pvs=21)
+- Position: **Software Engineer (신입)**
+
+## About me
+
+### 성장하는 개발자
+
+비대면 시기에 혼자 학습해야만 하는 환경을 극복하면서 기술 학습 역량을 갖추었습니다. 평점 평균 4.31의 우수한 성적으로 졸업하였고, 사전 지식 없이 Unity 프로젝트를 진행할 때 빠르게 학습하고 팀원과 협업한 경험이 있습니다.
+
+### 기술력 있는 개발자
+
+AWS를 학습하면서 Load Balancing과 Scale-Out을 통한 대규모 트래픽 처리를 이해하였으며, In-Memory DB의 특징을 살려 Look aside, Write back 방식 캐싱으로 응답 속도를 분당 2,300개 → 4,200개로 향상시키고 메인 DB의 부하를 감소시켰습니다. 또한 Redisson 분산 락을 사용하여 Scale-Out으로 인한 멀티 프로세스 환경에서 동시성 문제를 해결하였습니다.
+
+ Spring boot의 특징을 이해하면서 백엔드 API를 구현합니다. Gradle 멀티 모듈 구성으로 API를 도메인으로 나눈 MSA로 구현하여 Scale-Out 비용을 최적화시킨 경험이 있습니다.
+
+### 리더십 있는 개발자
+
+실생활의 문제를 해결하기 위한 방법을 고민하고, 프로젝트를 설계하면서 SDLC를 경험하였습니다. 프로젝트 기획을 설명하면서 생각을 구체적으로 전달하기 위한 커뮤니케이션 역량을 향상시켰고, 팀원의 역할 설정 및 일정 관리를 하면서 리더십을 향상시켰습니다.
+
+ 쓰레기 무단 투기 단속 장치를 개선하는 프로젝트를 리딩한 경험이 있습니다. 단속 장치가 투기와 상관없이 주변을 지나가는 모든 사람들에게 경고음을 출력해 부정적인 경험을 주는 문제를 해결하기 위해 객체 탐지로 쓰레기봉투를 인식했을 때만 경고음을 출력하고, 탐지된 시간과 위치를 기록하는 프로젝트를 기획 및 리딩하였습니다. 백엔드 API 구현을 맡아 YOLO 모델과 통합하여 프론트 엔드에 제공하였고, K-해커톤 본선에서 사업단장상을 수상하였습니다. 
+
+## Tech Stack
+
+### Language
+
+- Java
+    
+    JVM의 바이트 코드 실행과 GC에 대해서 이해하고 있으며 다양한 라이브러리를 응용하여 비즈니스 로직을 구현할 수 있습니다.
+    
+- Python
+    
+    알고리즘 트레이닝 주력 언어이며 간단한 툴이 필요할 때 Python으로 구현하였습니다.
+    
+
+### Database
+
+- MySQL
+    
+    관계형 데이터베이스를 사용한 프로젝트에서 메인 DB로 사용하였습니다.
+    
+- Redis
+    
+    In-memory DB의 특징을 살려 캐싱 용도로 사용하였으며, Redisson으로 MSA 환경에서 동시성 처리 솔루션을 구현하였습니다.
+    
+
+### Framework
+
+- Spring boot
+    
+    Bean, IoC/DI, PSA, AOP 개념을 이해하고 있으며, JPA 설정을 통한 DB 연동 경험이 있습니다.
+    
+
+### ETC
+
+- Git
+    
+    팀 프로젝트에서 협업을 위해 사용하였습니다. Branch를 나누어 프로젝트 복원에 사용하였고, .ignore 설정을 통해 불필요한 파일 공유를 제어했습니다.
+    
+- Docker
+    
+    Docker Compose 설정을 통해 빠르고 편리하게 독립된 가상 환경을 구축하기 위해 사용했습니다.
+    
+- AWS
+    
+    R53 - ALB - EC2 환경을 구성한 경험이 있으며 현업에서 운영 중인 인프라의 비용 관리 경험이 있습니다.
+    
+
+## Career
+
+### CELLKEY
+
+2023.09 - 2023.12
+
+*Spring Boot, Maria DB, AWS, Python*
+
+### 인턴십
+
+- **Python 단백질 분석 기능 구현**
+    - 단백질 raw file을 Python으로 읽어 세부정보(화학식, 분자량 등)을 엑셀 스프레드시트에 출력
+    - 멀티 쓰레딩 적용으로 단백질 파일 처리 속도 분당1회 → 분당7회 향상
+- **AWS 인프라 비용 분석**
+    - Megazone Cloud Billing 사용
+
+## Project
+
+### [**Preorder**](https://github.com/Dehkartes/Preorder)
+
+2024.04 - 2024.05
+
+1인 개발
+
+*Spring Boot, MySQL, Redis, Docker*
+
+### 스프링 학습을 위한 모의 쇼핑몰 API
+
+- **역할**
+    - 프로젝트 기획, PM, 백엔드 개발 및 데브옵스
+    - DB 스키마 설계 및 Docker 환경 구축
+- **주요 기능 구현**
+    - **MSA** 구축
+        - **Scale out 비용 최적화**를 통해 서버 비용 절감 및 시스템 확장성 향상
+        - Gradle로 서브 모듈 관리 및 **Docker로 실행 환경** 관리
+        - WebClient 서브 모듈 통신으로 모듈 간 안정적인 데이터 교환
+    - 재고 연산 **동시성** 처리
+        - **Redisson Distribution Lock**을 사용한 멀티 프로세스 환경에서의 **동시성 문제** 해결
+        - **Redis Look Aside + Write Back 캐싱** 사용
+            - 응답 속도 분당 2,300개 → 4,200개 향상
+    - 이메일 인증 모듈
+        - Google SMTP 환경 구축
+        - 인증용 난수 코드 생성
+        - Spring Java Mail Sender를 사용한 이메일 발송
+
+### [Automatic Crackdown System](https://github.com/Dehkartes/K-Hackaton_11_Zenith)
+
+2023.06 - 2023.08
+
+*MySQL, Python, Flask, YOLO, .Net*
+
+### 객체 탐지를 사용한 쓰레기 무단투기 감지 시스템
+
+3인 개발
+
+- **역할**
+    - 백엔드, 프로젝트 기획 및 PM
+    - DB 스키마 설계
+- **주요 기능 구현**
+    - CCTV 이미지 프레임 송수신: TCP 소켓 통신으로 구현
+    - 단속 시간 기록 DB 저장
+    - 연속적인 이미지 프레임 객체 탐지: YOLO detect 모듈 튜닝
+        - YOLO detect 모듈이 이미지 배열 처리를 지원하지 않아, 이미지 배열을 순회하며 각 이미지에 대해 처리하도록 코드 변경
+- **성과**
+    - K-Hackaton 11 본선 진출, 사업단장상 수상
+
+### [**OCR 건물 검색**](https://github.com/Dehkartes/2023_1_Capstone)
+
+2023.03 - 2023.05
+
+4인 개발
+
+*Spring, Python, Flask, Naver Cloud Platform, MySQL*
+
+### 간판 인식을 통한 건물 검색 서비스
+
+- **역할**
+    - 백엔드, 데브옵스, 프로젝트 기획 및 PM
+- **주요 기능 구현**
+    - deep-text-recognition-benchmark 모델 학습
+    - OCR API: 네이버 클라우드 OCR 및 On-premise 인프라 설정
+    - Base64 이미지 송수신 및 디코딩
+- **성과**
+    - 평점 A+
+
+## Activity
+
+---
+
+### 부트 캠프
+
+### 항해 99 취업 리부트 코스 2기 (백엔드)
+
+- 2024.03 - 2024.06
+- 알고리즘, 스프링 부트 학습
+- MSA, 동시성 처리, 캐싱, 백엔드 Restful API 구현
+
+### 교내 특별 과정
+
+### 
+
+### 우송 기업 멤버십 인공지능 응용 SW 개발 과정
+
+- 2023.03 - 2023.06
+- 인공지능, 머신러닝 학습
+- 선형 회귀 이해, Tensorflow를 사용한 선형 회귀 모델 구현
+
+### 우송 비트 Windows Developer 고급과정 34기
+
+- 2021.08 - 2022.02
+- .NET 학습
+- 서버/클라이언트 구조 이해, GUI 소프트웨어 구현
+
+### 자격증
+
+### AWS Certified Solutions Architect Associate
+
+- 2023.10 취득
+
+### OPIC IM1
+
+- 2022.09 취득
+
+## Education
+
+### 우송대학교
+
+2020.03 - 2024.02
+
+### IT 융합학부 스마트IT·보안 전공 공학사
+
+- 평점 평균: 4.31 / 4.50
