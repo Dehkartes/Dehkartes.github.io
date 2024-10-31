@@ -1,4 +1,5 @@
 ---
+categories: "Blog"
 title: "Resume" 
 toc: true
 toc_sticky: true
