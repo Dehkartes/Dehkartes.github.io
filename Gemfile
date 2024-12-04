@@ -13,7 +13,6 @@ source "https://rubygems.org"
 gem "github-pages", group: :jekyll_plugins
 gem "minimal-mistakes-jekyll", :github => "mmistakes/minimal-mistakes"
 gem "webrick"
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"
